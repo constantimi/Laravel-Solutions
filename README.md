@@ -10,7 +10,7 @@ events, etc.)
 
  - Ioan,Alexandra A. 🌈 @I429690 
  - Mihaylov,Konstantin K. 🐍 @I431166 
- - Mihaylov,Petar P. 🐱‍💻@I429937 
+ - Mihaylov,Petar P. 🐱‍💻 @I429937 
  
 
 
@@ -39,6 +39,36 @@ The approach used in this course is **Learning-by-doing**, therefore this course
 Besides classes, the student will have to spend a **minimum of 8 hours** (self-study) in the matter per week.
 We must commit your work at least on weekly basis in
 **GitLab**. It is important that you show consistent learning and improvement.
+
+## Tech Stack
+
+Laravel includes the Artisan CLI which handles many tasks
+
+- Creating controller & models
+- Creating database migration files and running migrations
+- Creating providers, events, jobs, form requests, etc
+- Show routes
+- Session commands
+- Run Tinker
+- Create custom commands
+
+> $ php artisan list
+$ php artisan help migrate
+$ php artisan make:controller TodosController *shoud be plural
+$ php artisan make:model Todo -m *shoud be singular
+$ php artisan make:migration add_todos_to_db -table
+$ php artisan migrate 
+$ php artisan tinker
+
+Laravel includes the Eloquent object relational mapper
+
+- Makes querying & working with the DB very easy 
+- We can still use raw SQL queries if needed
+
+Blade Template Engine
+
+- Add dynamic components
+- Can create custom components
 
 ## Useful links
 
