@@ -39,3 +39,9 @@ Laravel. (example : `php artisan make:auth`)
 Besides classes, the student will have to spend a **minimum of 8 hours** (self-study) in the matter per week.
 We must commit your work at least on weekly basis in
 **GitLab**. It is important that you show consistent learning and improvement.
+
+## Useful links
+
+- [xampp](https://www.apachefriends.org/index.html)
+- [composer](https://getcomposer.org/download/)
+- [phpstorm](https://www.jetbrains.com/phpstorm/)
