@@ -1,6 +1,6 @@
 # Web Development (WAD)  - Advanced Phase
 
-> During the advanced phase of the Web Application Development (WAD) course, we will be focusing on back-
+During the advanced phase of the Web Application Development (WAD) course, we will be focusing on back-
 end web development with PHP Framework called **Laravel**. 
 With this framework, we are going to create a **multiuser web application**
 with “dynamic” content containing **text and images** (reviews, recipes, live hacks, forum posts,
@@ -35,7 +35,7 @@ Laravel. (example : `php artisan make:auth`)
 
 ## Way of Working
 
-> The approach used in this course is **Learning-by-doing**, therefore this course is highly self-study oriented.
+The approach used in this course is **Learning-by-doing**, therefore this course is highly self-study oriented.
 Besides classes, the student will have to spend a **minimum of 8 hours** (self-study) in the matter per week.
 We must commit your work at least on weekly basis in
 **GitLab**. It is important that you show consistent learning and improvement.
