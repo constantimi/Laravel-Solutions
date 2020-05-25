@@ -56,3 +56,8 @@ You will receive all the necesarry guidance during lecture, however you will hav
 well. Each activity has a topic and each topic has a reference to the laravel documentation. **Do not treat the
 official documentation of Laravel as a walkthrough.**
 
+## Additional links
+
+- [xampp](https://www.apachefriends.org/index.html)
+- [composer](https://getcomposer.org/download/)
+- [phpstorm](https://www.jetbrains.com/phpstorm/)
