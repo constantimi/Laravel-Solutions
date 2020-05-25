@@ -53,11 +53,17 @@ Laravel includes the Artisan CLI which handles many tasks
 - Create custom commands
 
 `$ php artisan list` 
+
 `$ php artisan help migrate` 
+
 `$ php artisan make:controller TodosController` *shoud be plural 
+
 `$ php artisan make:model Todo -m` *shoud be singular 
+
 `$ php artisan make:migration add_todos_to_db -table` 
+
 `$ php artisan migrate` 
+
 `$ php artisan tinker`
 
 Laravel includes the Eloquent object relational mapper
