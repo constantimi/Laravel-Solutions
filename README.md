@@ -1,4 +1,13 @@
-# Web Development (WAD)  - Advanced Phase
+<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
+
+## Web Development (WAD) - Advanced Phase
 
 During the advanced phase of the Web Application Development (WAD) course, we will be focusing on back-
 end web development with PHP Framework called **Laravel**. 
@@ -6,15 +15,15 @@ With this framework, we are going to create a **multiuser web application**
 with “dynamic” content containing **text and images** (reviews, recipes, live hacks, forum posts,
 events, etc.)
 
-## Contributors
+
+### Contributors
 
  - Ioan,Alexandra A. 🌈 @I429690 
  - Mihaylov,Konstantin K. 🦎 @I431166 
  - Mihaylov,Petar P. 🐱 @I429937 
  
 
-
-## Learning goals
+### Learning goals
 
 After completing this phase of the module we will be able to:
 - Set up a development environment for Laravel web applications.
@@ -33,18 +42,43 @@ After completing this phase of the module we will be able to:
 Laravel. (example : `php artisan make:auth`)
 - Create **file upload** functionalities in Laravel.
 
-## Way of Working
+
+### Way of Working
 
 The approach used in this course is **Learning-by-doing**, therefore this course is highly self-study oriented.
 Besides classes, the student will have to spend a **minimum of 8 hours** (self-study) in the matter per week.
 We must commit your work at least on weekly basis in
 **GitLab**. It is important that you show consistent learning and improvement.
 
-## About Composer
+
+#### About Laravel
+
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
+
+#### Learning Laravel
+
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+
+
+#### About Composer
 
 Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
 
-## About Laravel CLI
+
+#### About Artisan CLI
 
 Laravel includes the Artisan CLI which handles many tasks
 
@@ -72,7 +106,8 @@ Laravel includes the Artisan CLI which handles many tasks
 
 `$ php artisan tinker`
 
-## About Eloquent
+
+#### About Eloquent
 
 Laravel includes the Eloquent object relational mapper
 
@@ -81,7 +116,8 @@ The Eloquent ORM included with Laravel provides a beautiful, simple ActiveRecord
 - Makes querying & working with the DB very easy 
 - We can still use raw SQL queries if needed
 
-## About Blade
+
+#### About Blade
 
 Blade is the simple, yet powerful templating engine provided with Laravel. Blade view files use the `.blade.php` file extension and are typically stored in the 'resources/views' directory. Two of the primary benefits of using Blade are template *inheritance* and *sections*.
 
@@ -90,12 +126,14 @@ Blade Template Engine do handles many tasks
 - Adding dynamic components
 - Creating custom components
 
-## Useful information
+
+### Useful information
 
 - [x] [Blade](https://laravel.com/docs/7.x/blade) 
 - [x] [Artisan](https://laravel.com/docs/7.x/artisan)
 - [x] [Composer](https://getcomposer.org/download/)
 - [x] [Eloquent](https://laravel.com/docs/7.x/eloquent)
+
 
 #### Additional components: 
 
