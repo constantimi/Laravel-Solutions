@@ -40,7 +40,12 @@ Besides classes, the student will have to spend a **minimum of 8 hours** (self-s
 We must commit your work at least on weekly basis in
 **GitLab**. It is important that you show consistent learning and improvement.
 
+## About Composer
+
+Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
+
 ## About Laravel
+
 
 Laravel includes the Artisan CLI which handles many tasks
 
@@ -52,6 +57,8 @@ Laravel includes the Artisan CLI which handles many tasks
 - Run Tinker
 - Create custom commands
 
+ Artisan is the command-line interface included with Laravel. Artisan provides a number of helpful commands that can assist you while you build your application.
+ 
 `$ php artisan list` 
 
 `$ php artisan help migrate` 
@@ -66,20 +73,32 @@ Laravel includes the Artisan CLI which handles many tasks
 
 `$ php artisan tinker`
 
+## About Eloquent
+
 Laravel includes the Eloquent object relational mapper
+
+The Eloquent ORM included with Laravel provides a beautiful, simple ActiveRecord implementation for working with your database. Each database table has a corresponding "Model" which is used to interact with that table. Models allow you to query for data in your tables, as well as insert new records into the table.
 
 - Makes querying & working with the DB very easy 
 - We can still use raw SQL queries if needed
 
-Blade Template Engine
+## About Blade
 
-- Add dynamic components
-- Can create custom components
+Blade is the simple, yet powerful templating engine provided with Laravel. Blade view files use the `.blade.php` file extension and are typically stored in the 'resources/views' directory. Two of the primary benefits of using Blade are template *inheritance* and *sections*.
+
+Blade Template Engine do handles many tasks
+
+- Adding dynamic components
+- Creating custom components
 
 ## Useful information
 
-- [x] **[Blade](https://laravel.com/docs/7.x/blade)** is the simple, yet powerful templating engine provided with Laravel. Blade view files use the _.blade.php_ file extension and are typically stored in the 'resources/views' directory. Two of the primary benefits of using Blade are template *inheritance* and *sections*.
-- [x] **[Artisan](https://laravel.com/docs/7.x/artisan)** is the command-line interface included with Laravel. Artisan provides a number of helpful commands that can assist you while you build your application.
-- [ ] [xampp](https://www.apachefriends.org/index.html)
-- [x] [composer](https://getcomposer.org/download/)
-- [ ] [phpstorm](https://www.jetbrains.com/phpstorm/)
+- [x] [Blade](https://laravel.com/docs/7.x/blade) 
+- [x] [Artisan](https://laravel.com/docs/7.x/artisan)
+- [x] [Composer](https://getcomposer.org/download/)
+- [x] [Eloquent](https://laravel.com/docs/7.x/eloquent)
+
+#### Additional components: 
+
+- [ ] [JetBrains phpStorm ide](https://www.jetbrains.com/phpstorm/)
+- [ ] [Xampp](https://www.apachefriends.org/index.html)
