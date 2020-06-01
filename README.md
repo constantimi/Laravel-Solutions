@@ -44,8 +44,7 @@ We must commit your work at least on weekly basis in
 
 Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
 
-## About Laravel
-
+## About Laravel CLI
 
 Laravel includes the Artisan CLI which handles many tasks
 
@@ -100,5 +99,7 @@ Blade Template Engine do handles many tasks
 
 #### Additional components: 
 
-- [ ] [JetBrains phpStorm ide](https://www.jetbrains.com/phpstorm/)
+- [ ] [Visual Studio Code](https://code.visualstudio.com/)
+- [ ] [Php](https://windows.php.net/download/)
+- [ ] [JetBrains/phpstorm](https://www.jetbrains.com/phpstorm/)
 - [ ] [Xampp](https://www.apachefriends.org/index.html)
