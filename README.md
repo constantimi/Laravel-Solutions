@@ -56,9 +56,9 @@ Laravel includes the Artisan CLI which handles many tasks
 
 `$ php artisan help migrate` 
 
-`$ php artisan make:controller TodosController` *shoud be plural 
+`$ php artisan make:controller TodosController` *shoud be plural* 
 
-`$ php artisan make:model Todo -m` *shoud be singular 
+`$ php artisan make:model Todo -m` *shoud be singular* 
 
 `$ php artisan make:migration add_todos_to_db -table` 
 
@@ -78,9 +78,8 @@ Blade Template Engine
 
 ## Useful information
 
-- ++[Blade](https://laravel.com/docs/7.x/blade)++ is the simple, yet powerful templating engine provided with Laravel. _Blade_ view files use the .blade.php file extension and are typically stored in the 'resources/views' directory. Two of the primary benefits of using Blade are template *inheritance* and *sections*.
-- ++[Artisan](https://laravel.com/docs/7.x/artisan)++ is the command-line interface included with Laravel. _Artisan_ provides a number of helpful commands that can assist you while you build your application.
-
-- [xampp](https://www.apachefriends.org/index.html)
-- [composer](https://getcomposer.org/download/)
-- [phpstorm](https://www.jetbrains.com/phpstorm/)
+- [x] **[Blade](https://laravel.com/docs/7.x/blade)** is the simple, yet powerful templating engine provided with Laravel. Blade view files use the _.blade.php_ file extension and are typically stored in the 'resources/views' directory. Two of the primary benefits of using Blade are template *inheritance* and *sections*.
+- [x] **[Artisan](https://laravel.com/docs/7.x/artisan)** is the command-line interface included with Laravel. Artisan provides a number of helpful commands that can assist you while you build your application.
+- [ ] [xampp](https://www.apachefriends.org/index.html)
+- [x] [composer](https://getcomposer.org/download/)
+- [ ] [phpstorm](https://www.jetbrains.com/phpstorm/)
