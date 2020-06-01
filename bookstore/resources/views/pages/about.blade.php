@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>{{config('app.name', 'Laravel')}}</title>
+@section('style')
+    <link rel="stylesheet" href="{{asset('css/about.css')}}">
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+@section('content')
 
-    </head>
-    <body>
-        <h1>About page</h1>
-    </body>
-</html>
+<div class="wrapper">
+    <div class="container">
+        <h1>{{$title}}</h1>
+            @if(count($services) > 0)
+                <ul>
+                    @foreach ($services as $service)
+                        <li>{{$service}}</li>
+                    @endforeach
+                </ul>
+            @endif
+    </div>
+</div>
+
+@endsection

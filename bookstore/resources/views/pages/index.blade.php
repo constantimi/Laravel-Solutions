@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>{{config('app.name', 'Laravel')}}</title>
+@section('style')
+    <link rel="stylesheet" href="{{asset('css/index.css')}}">
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-    </head>
-    <body>
-        <h1>Welcome To Laravel</h1>
-        <p>This is index page</p>
-    </body>
-</html>
+@section('content')
+    <div class="wrapper">
+        <div class="container">
+            <h1>{{$title}}</h1>
+        </div>
+    </div>
+@endsection
