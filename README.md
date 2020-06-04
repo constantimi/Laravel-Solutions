@@ -122,19 +122,3 @@ Blade Template Engine do handles many tasks
 
 - Adding dynamic components
 - Creating custom components
-
-
-### Useful information
-
-- [x] [Blade](https://laravel.com/docs/7.x/blade) 
-- [x] [Artisan](https://laravel.com/docs/7.x/artisan)
-- [x] [Composer](https://getcomposer.org/download/)
-- [x] [Eloquent](https://laravel.com/docs/7.x/eloquent)
-
-
-#### Additional components: 
-
-- [ ] [Visual Studio Code](https://code.visualstudio.com/)
-- [ ] [Php](https://windows.php.net/download/)
-- [ ] [JetBrains/phpstorm](https://www.jetbrains.com/phpstorm/)
-- [ ] [Xampp](https://www.apachefriends.org/index.html)
