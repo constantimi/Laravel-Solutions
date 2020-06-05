@@ -14,7 +14,7 @@ class ItemsController extends Controller
      */
     public function index()
     {
-        $items = Item::orderBy('title', 'desc')->paginate(10);
+        $items = Item::orderBy('created_at', 'desc')->paginate(10);
         return view('items.index')->with('items', $items);
     }
 
@@ -25,7 +25,7 @@ class ItemsController extends Controller
      */
     public function create()
     {
-        //
+        return view('items.create');
     }
 
     /**
@@ -36,7 +36,18 @@ class ItemsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        // Create item
+        $item = new Item;
+        $item->title = $request->input('title');
+        $item->description = $request->input('description');
+        $item->save();
+
+        return redirect(url('/items'))->with('success', 'Item Created');
     }
 
     /**

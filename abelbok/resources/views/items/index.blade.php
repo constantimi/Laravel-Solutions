@@ -1,17 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 class="">Item</h1>
+    <div class="container">
+        <h1>Item</h1>
 
-    @if (count($items) > 0)
-        @foreach ($items as $item)
-            <div class="well">
-                <h3 class=""><a href="{{ url('/items/'.$item->id) }}">{{$item->title}}</a></h3>
-                <small>Written on {{$item->created_at}}</small>
-            </div>
-        @endforeach
-        {{$items->links()}}
-    @else
-        <p> No items found <p>
-    @endif
+        @if (count($items) > 0)
+            @foreach ($items as $item)
+                <div class="card card-body bg-light">
+                    <h3><a href="{{ url('/items/'.$item->id) }}">{{$item->title}}</a></h3>
+                    <small>Written on {{$item->created_at}}</small>
+                </div>
+            @endforeach
+            {{$items->links()}}
+        @else
+            <p> No items found <p>
+        @endif
+    </div>
 @endsection
