@@ -24,8 +24,8 @@
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
-                <li>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
                     <a class="nav-link" href="{{ url('/items/create') }}"> Create Items</a>
                 </li>
             </ul>

@@ -70,7 +70,8 @@ class ItemsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Item::find($id);
+        return view('items.edit')->with('item', $item);
     }
 
     /**
@@ -82,7 +83,19 @@ class ItemsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        // Create item
+        $item = Item::find($id);
+        $item->title = $request->input('title');
+        $item->description = $request->input('description');
+        $item->save();
+
+        return redirect(url('/items'))->with('success', 'Item Updated');
+
     }
 
     /**
@@ -93,6 +106,8 @@ class ItemsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Item::find($id);
+        $item->delete();
+        return redirect(url('/items'))->with('success', 'Item Deleted');
     }
 }
