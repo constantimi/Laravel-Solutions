@@ -8,6 +8,16 @@ use App\Item;
 class ItemsController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' =>['index', 'show']]);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -71,7 +81,14 @@ class ItemsController extends Controller
      */
     public function edit($id)
     {
+
         $item = Item::find($id);
+        
+        // Check for correct user
+        if(auth()->user()->id !== $item->user_id){
+            return redirect(url('/items'))->with('error', 'Unauthorized page.');
+        }
+
         return view('items.edit')->with('item', $item);
     }
 
@@ -108,6 +125,12 @@ class ItemsController extends Controller
     public function destroy($id)
     {
         $item = Item::find($id);
+     
+        // Check for correct user
+        if(auth()->user()->id !== $item->user_id){
+            return redirect(url('/items'))->with('error', 'Unauthorized page.');
+        }
+        
         $item->delete();
         return redirect(url('/items'))->with('success', 'Item Deleted');
     }

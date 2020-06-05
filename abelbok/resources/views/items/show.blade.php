@@ -12,12 +12,17 @@
         <hr>
         <small>Written on {{$item->created_at}} by {{$item->user->name}}</small>
         <hr>
+        @if (!Auth::guest())
+            @if (Auth::user()->id == $item->user_id)                
+                        
+                <a class="btn btn-outline-dark float-left btn-sm" href="{{ url('items/'.$item->id.'/edit')}}">Edit</a>
 
-        <a class="btn btn-outline-dark float-left btn-sm" href="{{ url('items/'.$item->id.'/edit')}}">Edit</a>
-
-        {!!Form::open(['action' => ['ItemsController@destroy', $item->id], 'method' => 'POST', 'class' => 'float-right'])!!}
-            {{Form::hidden('_method', 'DELETE')}}
-            {{Form::submit('Delete', ['class' => 'btn btn-outline-danger btn-sm'])}}
-        {!!Form::close()!!}
+                {!!Form::open(['action' => ['ItemsController@destroy', $item->id], 'method' => 'POST', 'class' => 'float-right'])!!}
+                    {{Form::hidden('_method', 'DELETE')}}
+                    {{Form::submit('Delete', ['class' => 'btn btn-outline-danger btn-sm'])}}
+                {!!Form::close()!!}
+                
+            @endif
+        @endif
     </div>
 @endsection
