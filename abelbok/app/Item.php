@@ -12,4 +12,8 @@ class Item extends Model
     public $primaryKey = 'id';
     // Timestamp
     public $timestamps = true;
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

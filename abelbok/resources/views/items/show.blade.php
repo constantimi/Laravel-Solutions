@@ -10,7 +10,7 @@
             {!! $item->description !!}
         </div>
         <hr>
-        <small>Written on {{$item->created_at}}</small>
+        <small>Written on {{$item->created_at}} by {{$item->user->name}}</small>
         <hr>
 
         <a class="btn btn-outline-dark float-left btn-sm" href="{{ url('items/'.$item->id.'/edit')}}">Edit</a>

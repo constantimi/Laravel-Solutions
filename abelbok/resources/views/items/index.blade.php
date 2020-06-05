@@ -9,7 +9,7 @@
             @foreach ($items as $item)
                 <div class="card card-body bg-white my-3">
                     <h3><a href="{{ url('/items/'.$item->id) }}">{{$item->title}}</a></h3>
-                    <small>Written on {{$item->created_at}}</small>
+                    <small>Written on {{$item->created_at}} by {{$item->user->name}}</small>
                 </div>
             @endforeach
             {{$items->links()}}
