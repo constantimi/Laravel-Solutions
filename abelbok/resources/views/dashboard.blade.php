@@ -37,8 +37,6 @@
                                 @endforeach
                             </tbody>
                         </table>    
-                    @else
-                        <p>You have no items!</p>
                     @endif
                 </div>
             </div>

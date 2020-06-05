@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Item;
 
 class ItemsController extends Controller
@@ -48,14 +49,37 @@ class ItemsController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'cover_image' => 'image|nullable|max:1999'
         ]);
 
+        // Handle file upload
+        if($request->hasFile('cover_image')){
+            
+            // Get file name with extension
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+
+            // Get filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+            // Get extension
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+
+            //Filename to store
+            $filenameToStore = $filename.'_'.time().'.'.$extension;
+
+            // Upload Image
+            $path = $request->file('cover_image')->storeAs('public/storage/', $filenameToStore);
+
+        }else{
+            $filenameToStore = 'dafault_cover.jpg';
+        }
         // Create item
         $item = new Item;
         $item->title = $request->input('title');
         $item->description = $request->input('description');
         $item->user_id = auth()->user()->id;
+        $item->cover_image = $filenameToStore;
         $item->save();
 
         return redirect(url('/items'))->with('success', 'Item Created');
@@ -106,10 +130,35 @@ class ItemsController extends Controller
             'description' => 'required'
         ]);
 
+        // Handle file upload
+        if($request->hasFile('cover_image')){
+                    
+            // Get file name with extension
+            $fileameWithExt = $request->file('cover_image')->getClientOriginalName();
+
+            // Get filename
+            $filename = pathinfo($fileameWithExt, PATHINFO_FILENAME);
+
+            // Get extension
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+
+            //Filename to store
+            $filenameToStore = $filename.'_'.time().'.'.$extension;
+
+            // Upload Image
+            $path = $request->file('cover_image')->storeAs('public/storage', $filenameToStore);
+
+        }
+
         // Create item
-        $item = Item::find($id);
+        $item = new Item;
         $item->title = $request->input('title');
         $item->description = $request->input('description');
+        
+        if($request->hasFile('cover_image')){
+            $item->cover_image = $filenameToStore;
+        }
+
         $item->save();
 
         return redirect(url('/items'))->with('success', 'Item Updated');
@@ -129,6 +178,11 @@ class ItemsController extends Controller
         // Check for correct user
         if(auth()->user()->id !== $item->user_id){
             return redirect(url('/items'))->with('error', 'Unauthorized page.');
+        }
+
+        if($item->cover_image != 'default_cover.jpg'){
+            // Default Image
+            Storage::delete('public/storage/'.$item->cover_image);
         }
         
         $item->delete();

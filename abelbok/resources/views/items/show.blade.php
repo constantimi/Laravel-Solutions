@@ -5,8 +5,10 @@
         <a class="btn btn-outline-dark btn-sm my-3" href="{{ url('/items')}}" class="btn btn-link">Go Back</a>
         
         <h1 class="">{{$item->title}}</h1>
-        
-        <div class="container">
+
+        <img width="100px" height="100px" src="{{ url('storage/storage/'.$item->cover_image)}}" />
+
+        <div class="container mt-2">
             {!! $item->description !!}
         </div>
         <hr>
