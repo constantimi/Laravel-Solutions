@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'DashboardController@index')->name('home');
+Route::get('/', 'WelcomeController@index');
+Route::get('/items', 'ItemsController@index');
+Route::get('/dashboard', 'DashboardController@index');
 
 Route::resource('items', 'ItemsController');

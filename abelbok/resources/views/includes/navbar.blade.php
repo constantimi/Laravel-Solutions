@@ -25,11 +25,6 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/items/create') }}"> Create Items</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
@@ -56,6 +51,9 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
+            
+                            <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                
                         </div>
                     </li>
                 @endguest

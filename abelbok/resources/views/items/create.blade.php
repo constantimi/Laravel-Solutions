@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Create Item</h1>
+    <h1 class="mt-5">Create Item</h1>
     {!! Form::open(['action' => 'ItemsController@store', 'method' => 'POST']) !!}
         <div class="form-group">
             {{Form::label('title', 'Title')}}
@@ -11,6 +11,6 @@
             {{Form::label('description', 'Description')}}
             {{Form::textarea('description', '', ['id'=> 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Description text'])}}
         </div>
-        {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+        {{Form::submit('Create', ['class'=>'btn btn-success'])}}
     {!! Form::close() !!}
 @endsection

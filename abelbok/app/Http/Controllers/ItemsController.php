@@ -45,6 +45,7 @@ class ItemsController extends Controller
         $item = new Item;
         $item->title = $request->input('title');
         $item->description = $request->input('description');
+        $item->user_id = auth()->user()->id;
         $item->save();
 
         return redirect(url('/items'))->with('success', 'Item Created');
