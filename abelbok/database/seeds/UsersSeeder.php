@@ -17,12 +17,12 @@ class UsersSeeder extends Seeder
             [
             'name' => 'seeder',
             'email' => 'seeder@gmail.com',
-            'password' => Hash::make('pass')
+            'password' => Hash::make('password')
             ],
             [
                 'name' => 'tester',
                 'email' => 'tester@gmail.com',
-                'password' => Hash::make('pass')
+                'password' => Hash::make('password')
             ]
         ]);
     }
