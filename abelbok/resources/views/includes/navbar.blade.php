@@ -13,15 +13,18 @@
         </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/items') }}">Items</a>
-                </li>
-            </ul>
+            @if (!Auth::guard('admin')->check())
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/items') }}">Items</a>
+                    </li>
+                </ul>
+            @endif
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav ml-auto">
@@ -52,8 +55,9 @@
                                 @csrf
                             </form>
 
-                            <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
-
+                            @if (!Auth::guard('admin')->check())
+                                <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                            @endif
                         </div>
                     </li>
                 @endguest
