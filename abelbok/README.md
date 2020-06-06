@@ -23,6 +23,8 @@ project and name the copy simply .env.
 
 `cp .env.example .env`
 
+> In the <b>.env</b> file you should change all of the DB propertiees
+
 ### 5. Generate an app encryption key
 
 `php artisan key:generate`
