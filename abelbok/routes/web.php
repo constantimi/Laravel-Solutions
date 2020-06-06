@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'WelcomeController@index');
+
 Route::get('/items', 'ItemsController@index');
+Route::resource('items', 'ItemsController');
+
 Route::get('/dashboard', 'DashboardController@index');
 
-Route::resource('items', 'ItemsController');
+Route::get('/admin', 'AdminController@index');
