@@ -11,7 +11,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-            
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav mr-auto">
@@ -27,12 +27,12 @@
             <ul class="nav navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link btn btn-outline-dark pl-4 pr-4 pt-1 pb-1" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link btn btn-outline-light pl-3 pr-3 pt-1 pb-1" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
                 @else
@@ -51,9 +51,9 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
-            
+
                             <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
-                
+
                         </div>
                     </li>
                 @endguest

@@ -55,7 +55,7 @@ class ItemsController extends Controller
 
         // Handle file upload
         if($request->hasFile('cover_image')){
-            
+
             // Get file name with extension
             $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
 
@@ -107,7 +107,7 @@ class ItemsController extends Controller
     {
 
         $item = Item::find($id);
-        
+
         // Check for correct user
         if(auth()->user()->id !== $item->user_id){
             return redirect(url('/items'))->with('error', 'Unauthorized page.');
@@ -132,7 +132,7 @@ class ItemsController extends Controller
 
         // Handle file upload
         if($request->hasFile('cover_image')){
-                    
+
             // Get file name with extension
             $fileameWithExt = $request->file('cover_image')->getClientOriginalName();
 
@@ -151,10 +151,13 @@ class ItemsController extends Controller
         }
 
         // Create item
-        $item = new Item;
+        //$item = new Item; It should update the current item
+
+
+        $item = Item::find($id);
         $item->title = $request->input('title');
         $item->description = $request->input('description');
-        
+
         if($request->hasFile('cover_image')){
             $item->cover_image = $filenameToStore;
         }
@@ -174,7 +177,7 @@ class ItemsController extends Controller
     public function destroy($id)
     {
         $item = Item::find($id);
-     
+
         // Check for correct user
         if(auth()->user()->id !== $item->user_id){
             return redirect(url('/items'))->with('error', 'Unauthorized page.');
@@ -184,7 +187,7 @@ class ItemsController extends Controller
             // Default Image
             Storage::delete('public/storage/'.$item->cover_image);
         }
-        
+
         $item->delete();
         return redirect(url('/items'))->with('success', 'Item Deleted');
     }

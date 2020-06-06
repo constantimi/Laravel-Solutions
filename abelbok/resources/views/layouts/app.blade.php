@@ -26,6 +26,7 @@
         @include('includes.messages')
         @yield('content')
     </div>
+
     <!-- CkEditor -->
     <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
     <script>
@@ -33,7 +34,8 @@
         .create(document.querySelector('#article-ckeditor'))
         .catch(error=>{
             console.error(error);
-        });                                             
+        });
     </script>
+
 </body>
 </html>
