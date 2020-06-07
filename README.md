@@ -1,11 +1,11 @@
-# Web Development (WAD) - Advanced Phase
+# Laravel Ecommerce Api
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-During the advanced phase of the Web Application Development (WAD) course, we will be focusing on back-
+Web Application Development course, which is focusing in the back-
 end web development with PHP Framework called **Laravel**. 
 With this framework, we are going to create a **multiuser web application**
 with “dynamic” content containing **text and images** (reviews, recipes, live hacks, forum posts,
@@ -15,9 +15,8 @@ events, etc.)
 
 ### Contributors
 
- - Ioan,Alexandra A. 🌈 @I429690 
- - Mihaylov,Konstantin K. 🦎 @I431166 
- - Mihaylov,Petar P. 🐱 @I429937 
+ - Mihaylov,Konstantin K. 🦎  
+ - Mihaylov,Petar P. 🐱  
  
 
 ### Learning goals
@@ -38,15 +37,6 @@ After completing this phase of the module we will be able to:
 - Create **authentication and authorization** functionality by making use of the built-in features of
 Laravel. (example : `php artisan make:auth`)
 - Create **file upload** functionalities in Laravel.
-
-
-### Way of Working
-
-The approach used in this course is **Learning-by-doing**, therefore this course is highly self-study oriented.
-Besides classes, the student will have to spend a **minimum of 8 hours** (self-study) in the matter per week.
-We must commit your work at least on weekly basis in
-**GitLab**. It is important that you show consistent learning and improvement.
-
 
 #### About Laravel
 
