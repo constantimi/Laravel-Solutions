@@ -11,18 +11,23 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/theme.js') }}" defer></script>
+    <script src="{{ asset('js/dropdown.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/content.css') }}" rel="stylesheet">
 
 </head>
 <body>
     @include('includes.navbar')
-    <div class="container">
+    <div class="content-container">
         @include('includes.messages')
         @yield('content')
     </div>
@@ -33,7 +38,7 @@
         ClassicEditor
         .create(document.querySelector('#article-ckeditor'))
         .catch(error=>{
-            console.error(error);
+            console.log(error);
         });
     </script>
 

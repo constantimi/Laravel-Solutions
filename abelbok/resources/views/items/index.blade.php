@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container panel-wrapper content-group">
 
-        <h1 class="mt-3">Items</h1>
+        <p>Popular posts</p>
 
         @if (count($items) > 0)
             @foreach ($items as $item)
-                <div class="card card-body bg-white my-3">
+                <div class="card card-body my-3">
                     <div class="row">
                         <div class="col-md-4 col-sm-4">    
                             <img width="100px" height="100px" src="{{ url('storage/storage/'.$item->cover_image)}}" />
@@ -22,7 +22,7 @@
             @endforeach
             {{$items->links()}}
         @else
-            <p> No items found <p>
+            <p> No posts found <p>
         @endif
     </div>
 @endsection

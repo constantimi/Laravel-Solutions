@@ -20,6 +20,8 @@ Route::get('/', 'WelcomeController@index');
 Route::get('/items', 'ItemsController@index');
 Route::resource('items', 'ItemsController');
 
+Route::get('/about', 'AboutController@index');
+Route::get('/account', 'AccountsController@index');
 Route::get('/dashboard', 'DashboardController@index');
 
 Route::prefix('admin')->group(function() {
@@ -32,5 +34,4 @@ Route::prefix('admin')->group(function() {
     Route::get('/password/reset', 'Auth\AdminForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
     Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset');
     Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
-
 });

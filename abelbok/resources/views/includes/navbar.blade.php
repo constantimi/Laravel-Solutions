@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
+<nav class="navbar navbar-expand-lg py-0">
     <div class="container">
         <!-- Logo Navbar -->
         <a class="navbar-brand" href="{{ url('/') }}">
@@ -21,7 +21,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/items') }}">Items</a>
+                        <a class="nav-link" href="{{ url('/items') }}">Posts</a>
                     </li>
                 </ul>
             @endif
@@ -35,29 +35,53 @@
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-light pl-3 pr-3 pt-1 pb-1" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link btn btn-dark pl-3 pr-3 pt-1 pb-1" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                        <div class="dropdown-close-tag">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle py-1 btn shadow-none" href="#" role="button" aria-pressed="false" autocomplete="off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
+                            <div class="dropdown-menu dropdown-menu-right theme" aria-labelledby="navbarDropdown">
+                            
+                                <h3 class="dropdown-header theme">View options</h3>
+                                
+                                <div class="theme-container">
+                                    Dark / Light 
+                                    <input class="tgl tgl-light" type="checkbox" id="switch-theme" name="theme" /> 
+                                    <label class="tgl-btn" for="switch-theme"></label>                                      
+                                </div>
 
-                            @if (!Auth::guard('admin')->check())
-                                <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
-                            @endif
+                                <div class="dropdown-divider theme"></div>
+                                <h3 class="dropdown-header theme">More stuff</h3>
+
+                                @if (!Auth::guard('admin')->check())
+                                    <a class="dropdown-item theme" href="{{ url('/account') }}">Account</a>
+                                @endif
+
+                                @if (!Auth::guard('admin')->check())
+                                    <a class="dropdown-item theme" href="{{ url('/dashboard') }}">Dashboard</a>
+                                @endif
+
+                                <div class="dropdown-divider theme"></div>
+
+                                @if (!Auth::guard('admin')->check())
+                                    <a class="dropdown-item theme" href="{{ url('/about') }}">About</a>
+                                @endif
+
+                                <a class="dropdown-item theme" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
                         </div>
                     </li>
                 @endguest

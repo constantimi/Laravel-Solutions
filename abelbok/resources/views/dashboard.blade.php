@@ -4,9 +4,9 @@
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card panel-wrapper">
                 <div class="card-body">
-                    <h1>Your {{ config('app.name', 'Laravel') }} Item</h1>
+                    <h1>Your {{ config('app.name', 'Laravel') }} Posts</h1>
 
                     <a href="{{ url('/items/create') }}" class="btn btn-outline-success float-left my-3">Create new item</a>
                     
